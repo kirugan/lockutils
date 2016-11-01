@@ -1,0 +1,20 @@
+=== RR ===
+main: RLock
+go: RLock
+go: RUnlock
+main: RUnlock
+=== RW ===
+main: RLock
+go: Lock
+main: RUnlock
+go: Unlock
+=== WW ===
+main: Lock
+go: Lock
+main: Unlock
+go: Unlock
+=== WR ===
+main: Lock
+go: RLock
+main: Unlock
+go: RUnlock
